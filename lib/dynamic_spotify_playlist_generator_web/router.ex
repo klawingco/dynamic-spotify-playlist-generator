@@ -19,6 +19,13 @@ defmodule DynamicSpotifyPlaylistGeneratorWeb.Router do
 
     get "/", PageController, :index
   end
+  scope "/auth", DynamicSpotifyPlaylistGeneratorWeb do
+    pipe_through :browser
+
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+  end
+
 
   # Other scopes may use custom stacks.
   # scope "/api", DynamicSpotifyPlaylistGeneratorWeb do

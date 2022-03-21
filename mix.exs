@@ -46,8 +46,8 @@ defmodule DynamicSpotifyPlaylistGenerator.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:ueberauth, "~> 0.3"},
-      {:ueberauth_spotify, "0.2.1"}
+      {:ueberauth, "~> 0.6"},
+      {:ueberauth_spotify, git: "git@github.com:klawingco/ueberauth_spotify.git", tag: "0.2.2"}
     ]
   end
 
